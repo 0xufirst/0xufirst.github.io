@@ -3,47 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demis Santos - Site Pessoal</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-        }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background: #333;
-            color: white;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Demis Santos - GitHub Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            window.addEventListener("scroll", function() {
+                sections.forEach(sec => {
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop - 300;
+                    let height = sec.offsetHeight;
+                    if (top >= offset && top < offset + height) {
+                        sec.style.opacity = "1";
+                        sec.style.transform = "translateY(0)";
+                    } else {
+                        sec.style.opacity = "0";
+                        sec.style.transform = "translateY(50px)";
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
-        Demis Santos
+        <h1>Demis Santos</h1>
+        <p>Professor | Pesquisador | Competidor</p>
     </header>
     
     <section>
@@ -52,14 +37,9 @@
     </section>
     
     <section>
-        <h2>Atuação</h2>
-        <ul>
-            <li>Professor substituto no IFPB</li>
-            <li>Professor na Escola de Saúde Pública ESP</li>
-            <li>Professor técnico no IEP</li>
-            <li>Faixa preta 2º grau em Jiu-Jitsu</li>
-            <li>Faixa preta 1º dan em Judô</li>
-        </ul>
+        <h2>Projetos</h2>
+        <p>Confira meus projetos no GitHub:</p>
+        <a href="https://github.com/seuusuario" target="_blank" class="btn">Meu GitHub</a>
     </section>
     
     <section>
