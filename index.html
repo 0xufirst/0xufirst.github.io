@@ -1,55 +1,44 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demis Santos - GitHub Page</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const sections = document.querySelectorAll("section");
-            window.addEventListener("scroll", function() {
-                sections.forEach(sec => {
-                    let top = window.scrollY;
-                    let offset = sec.offsetTop - 300;
-                    let height = sec.offsetHeight;
-                    if (top >= offset && top < offset + height) {
-                        sec.style.opacity = "1";
-                        sec.style.transform = "translateY(0)";
-                    } else {
-                        sec.style.opacity = "0";
-                        sec.style.transform = "translateY(50px)";
-                    }
-                });
-            });
-        });
-    </script>
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Demis Santos</h1>
-        <p>Professor | Pesquisador | Competidor</p>
+        <h1>Bem-vindo ao Meu Site Pessoal</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <section>
-        <h2>Sobre Mim</h2>
-        <p>Sou professor, pesquisador e competidor de Jiu-Jitsu, além de possuir experiência em Judô e estudos em contrainteligência e engenharia social.</p>
-    </section>
-    
-    <section>
-        <h2>Projetos</h2>
-        <p>Confira meus projetos no GitHub:</p>
-        <a href="https://github.com/seuusuario" target="_blank" class="btn">Meu GitHub</a>
-    </section>
-    
-    <section>
-        <h2>Contato</h2>
-        <p>Email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/seuperfil" target="_blank">Meu LinkedIn</a></p>
-    </section>
-    
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Eu sou [Seu Nome], um desenvolvedor web apaixonado por criar soluções incríveis na web.</p>
+        </section>
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <p>Aqui estão alguns dos meus projetos:</p>
+            <ul>
+                <li>Projeto 1</li>
+                <li>Projeto 2</li>
+                <li>Projeto 3</li>
+            </ul>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Você pode entrar em contato comigo pelo email: <a href="mailto:seuemail@example.com">seuemail@example.com</a></p>
+        </section>
+    </main>
     <footer>
-        &copy; 2025 Demis Santos - Todos os direitos reservados
+        <p>&copy; 2025 Meu Site Pessoal. Todos os direitos reservados.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
